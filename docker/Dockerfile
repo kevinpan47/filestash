@@ -2,7 +2,7 @@
 FROM alpine:latest as builder_prepare
 WORKDIR /home/
 RUN apk add git && \
-    git clone --depth 1 https://github.com/mickael-kerjean/filestash
+    git clone --depth 1 https://github.com/kevinpan47/filestash
 
 # STEP2: BUILD THE FRONTEND
 FROM node:13-alpine AS builder_frontend

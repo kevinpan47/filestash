@@ -2,7 +2,8 @@ version: '2'
 services:
   app:
     container_name: filestash
-    image: machines/filestash
+    build:
+      context: .
     restart: always
     environment:
     - APPLICATION_URL=
