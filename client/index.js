@@ -145,7 +145,7 @@ function setup_translation() {
 function setup_chromecast() {
     if (!CONFIG.enable_chromecast) {
         return Promise.resolve();
-    } else if (typeof window.chrome === undefined) {
+    } else if (!("chrome" in window)) {
         return Promise.resolve();
 	} else if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
         return Promise.resolve();
