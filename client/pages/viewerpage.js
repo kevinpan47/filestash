@@ -4,11 +4,11 @@ import Path from "path";
 
 import "./viewerpage.scss";
 import "./error.scss";
-import { Files } from "../model/";
+import { Files, Chromecast } from "../model/";
 import {
     BreadCrumb, Bundle, NgIf, Loader, EventReceiver, LoggedInOnly, ErrorPage,
 } from "../components/";
-import { opener, notify } from "../helpers/";
+import { opener, notify, objectGet } from "../helpers/";
 import { FileDownloader, ImageViewer, PDFViewer, FormViewer } from "./viewerpage/";
 
 const VideoPlayer = (props) => (
